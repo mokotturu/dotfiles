@@ -1,0 +1,1 @@
+/home/monish/.local/share/omf/themes/beloglazov/fish_prompt.fish
