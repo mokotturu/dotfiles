@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\]\t \[\033[41m\]\u@\h\[\033[00m\]:\[\033[47m\]\[\033[30m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[00m\]\t \[\033[44m\]\u@\h\[\033[00m\]:\[\033[47m\]\[\033[30m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -118,8 +118,13 @@ fi
 
 alias umlcs='ssh mkotturu@cs.uml.edu'
 alias ..='cd ..'
-alias bashrc='vim .bashrc'
+alias bashrc='vim ~/.bashrc'
+alias cpbash='cp ~/.bashrc ~/.config/.bashrc'
+alias cpzsh='cp ~/.zshrc ~/.config/.zshrc'
+alias cpimwheel='cp ~/.imwheelrc ~/.config/.imwheelrc'
 alias please='sudo'
 alias yeet='rm'
+alias dumpconf='dconf dump / > ~/.config/dconf/user.conf'
+alias opendump='vim ~/.config/dconf/user.conf'
 
 neofetch
