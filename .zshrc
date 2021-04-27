@@ -39,8 +39,15 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 alias ll='ls -al'
 alias umlcs='ssh mkotturu@cs.uml.edu'
 alias ..='cd ..'
+alias less='less -N'
+alias bashrc='vim ~/.bashrc'
+alias cpbash='cp ~/.bashrc ~/.config/.bashrc'
+alias cpzsh='cp ~/.zshrc ~/.config/.zshrc'
+alias cpimwheel='cp ~/.imwheelrc ~/.config/.imwheelrc'
 alias please='sudo'
 alias yeet='rm'
+alias dumpconf='dconf dump / > ~/.config/dconf/user.conf'
+alias opendump='vim ~/.config/dconf/user.conf'
 
 neofetch
 

@@ -116,8 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias ll='ls -al'
 alias umlcs='ssh mkotturu@cs.uml.edu'
 alias ..='cd ..'
+alias less='less -N'
 alias bashrc='vim ~/.bashrc'
 alias cpbash='cp ~/.bashrc ~/.config/.bashrc'
 alias cpzsh='cp ~/.zshrc ~/.config/.zshrc'
