@@ -1,0 +1,7 @@
+configuration {
+	hide-scrollbar: true;
+	column: 3;
+	modi: "drun";
+	theme: "~/.config/rofi/mytheme.rasi";
+}
+
