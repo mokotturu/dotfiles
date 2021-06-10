@@ -3,6 +3,7 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $popCol #767c88
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -27,7 +28,7 @@ font xft:Jetbrains mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -52,8 +53,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -282,7 +283,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
@@ -335,15 +336,15 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #212121
+        background #18191C
         statusline #FFFFFF
         separator  #454947
 
 #                           border  backgr. text
-        focused_workspace  #AED581 #AED581 #212121
-        active_workspace   #AED581 #AED581 #212121
-        inactive_workspace #212121 #212121 #909090
-        binding_mode       #E6BDB9 #7B5F75 #FFFFFF
+        focused_workspace  $popCol $popCol #18191C
+        active_workspace   $popCol $popCol #18191C
+        inactive_workspace #18191C #18191C #909090
+        binding_mode       $popCol $popCol #18191C
         urgent_workspace   #FF0000 #AA0000 #FFFFFF
     }
 }
@@ -353,7 +354,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #AED581 #000000 #AED581 #FDF6E3  #AED581
+  client.focused          $popCol #000000 $popCol #FDF6E3  $popCol
   client.focused_inactive #202020 #202020 #909090 #454948
   client.unfocused        #202020 #202020 #909090 #454948
   client.urgent           #aa5050 #aa5050 #000000 #268BD2
